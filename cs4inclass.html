@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Session 4 - Hotspots or Image Maps</title>
+
+	<style>
+	/* Your styles go here */
+	body{background:url(music.gif) fixed repeat center;}
+	p#a, h1{text-align: center;}
+	img#b{position:absolute; top:600px; left:600px;}
+	h3{color: yellow;
+		position:absolute;
+		top:600px;
+		left:600px;
+		z-index: 1;
+	}
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+
+	<h1>
+		Image Maps or Hostspots
+	</h1>
+	<p id="a">
+	<map name="middlesex" id="middle">
+		<area shape="rect" coords="297,359,330,380" href="http://www.wellesleyma.gov" alt="Town of Wellesley Website">
+		<area shape="rect" coords="228,337,382,369" href="http://www.newtonma.gov" alt="Town of Newton Website">
+	</map>
+
+		<img src=Middlesex.gif alt="Map of Middlesex County" title="Middlesex, MA" usemap="#middlesex">
+	</p>
+	<hr>
+	<h3>Go Babo!</h3>
+	<img id="b" src="beaver.jpeg" alt="Babson Beaver Image" title="Beaver Image">
+
+  </body>
+</html>
