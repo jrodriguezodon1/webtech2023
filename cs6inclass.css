@@ -1,0 +1,47 @@
+h1 {font-family:Arial; text-align:center; color:green;}
+table, td {border:1px solid black;}
+table {width:50%; 
+    color:navy;
+    text-align:center;
+    margin-right:auto; margin-left:auto;
+    background:url(music.gif);}
+
+tr#header {background-color:yellow; font-weight:bold;}
+.c1 {width:30%; font-family:sans-serif;}
+.c2 {width:50%;}
+.c3 {width:20%;}
+
+div#p {background-color:silver; overflow:scroll; width:150px; height:200px;
+float:right;}
+
+img#tiggy {width:40%; 
+        display:block; 
+        margin:auto;
+        border-radius:50%;}
+/* The margin auto will NOT work unless the display is set to block */
+
+/* Below, we have defined the box-shadow CSS rule. The parameters are */
+/* horizontal offset - how much to the right you want the shadow */
+/* vertical offset - how much below you want the shadow */
+/* The above two are mandatory. The next two are the blur - how */
+/* much you want the shadow diffused/blurred, and spread - how much */
+/* wide you want the shadow to be. These two are optional. The last */
+/* is the color */
+img#tiggy:hover {box-shadow:10px 10px 40px 10px red;}
+
+
+.container {position:relative; 
+            border:1px solid green;
+            width:40%;
+            height:auto;
+            margin:auto;}
+img#foto {display:block; width:100%;}
+.curtain {position:absolute;
+          top:0%; left:0%; right:0%;
+          width:100%; height:20%;
+          background:silver; 
+          overflow:hidden;
+          transition: 5s ease;}
+.words {position:relative; top:30%; left:10%;
+        overflow:hidden; color:navy; font-size:small;}
+.container:hover .curtain {height:100%;}

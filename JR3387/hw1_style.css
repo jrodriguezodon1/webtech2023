@@ -1,0 +1,113 @@
+h1  
+/* 
+The h1 must be centered on the page and use the Arial font.
+The heading must have a yellow color background. 
+*/
+    {
+    text-align:center;
+    font-family:Arial; 
+    background-color: yellow;
+    }
+
+.content 
+/* 
+The silver area between the left edge and the content must be 150px.  The silver area between the right edge and the content must be 150px. The silver area between the top and bottom edges and the content must be 25px each. These are shown in the figure above using white textboxes. You may ignore these boxes for your formatting purposes. 
+*/
+    {
+    margin-left: 150px; margin-right: 150px; margin-top: 25px; margin-bottom: 25px;
+    }
+
+h3 
+/* 
+The h3 must be aligned left and use Cambria font.
+The two sub-headings in h3 must have a white background. The background must cover only the text and must not extend too far outside the text to the right. Just about approx. half the width of content area. There is a red-line drawn to show you what the width of the content area is so that you can gauge one-half that width.
+*/
+    {
+    text-align: left; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    background-color: whitesmoke;
+    margin-left: 150px;
+    margin-right: 40%;
+    }
+
+p 
+/* 
+The paragraph must be in the default font, default (black) color. The first line must be indented 20px (as seen in the figure). 
+*/
+    {  
+    font-family: inherit; 
+    color: inherit;
+    text-indent: 20px;
+    }
+
+div 
+/* 
+The entire rest of the content (not including the page header that uses h1) must have a silver color background
+*/
+    {
+    background-color:silver;
+    padding-bottom: 25px;
+    }
+
+body 
+/* 
+The white space to the left and right of the silver area must be 200px. This too is shown in the figure above. The white space to the top (above the yellow section) is 50px (not shown in figure) and bottom has no white space below the silver section
+*/
+    {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 200px;
+    margin-left: 200px;
+    background-color: white;
+    }
+
+
+img#img 
+/* 
+The image must be set to the right side with the paragraph text flowing around it. It must have a 5px space between the text and the image on the left side.
+*/
+    {
+    float: right;
+    margin-left: 5px;
+    }
+    
+table 
+/* 
+The sample table width must be 50% of the width of the page and must be centered on the page. It uses Arial that is italicized. The size of the font is 12px.  The font must be centered in the table. 
+*/
+    {
+    width: 50%;
+    text-align: center;
+    font: arial; font-style: italic; font-size: 12px;
+    margin-right:auto; margin-left:auto;
+    }
+
+.column1 
+/* 
+The left column of the table must have a blue background. 
+The font color of the left column must be yellow.
+*/
+    {
+    background-color: blue;
+    color: yellow;
+    }
+
+a
+/* 
+The right column a dark-orange background.
+The right column font must be black. 
+*/
+    {
+    text-decoration: none underline;
+    color: inherit;
+    }
+
+.column2
+/* 
+The right column a dark-orange background.
+The right column font must be black. 
+*/
+    {
+    background-color: darkorange;
+    color: black;
+    }

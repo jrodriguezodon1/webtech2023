@@ -1,0 +1,64 @@
+/*
+1.	(7) Create an external stylesheet that is linked to your “index.htm” and the “toc.htm” pages. This stylesheet must define two things: (1) the background for both pages must have a grey color (any variation of grey is fine) and (2) the <h1> tags in both pages must have Arial font, navy color, and must be centered on the pages.  Attach this style sheet to the two pages.
+*/
+body 
+/*
+The background for both pages must have a grey color (any variation of grey is fine)
+*/
+    {
+        background-color: gray;
+    }
+
+h1
+/*
+The <h1> tags in both pages must have Arial font, navy color, and must be centered on the pages.  
+*/
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        color: navy;
+        text-align: center;
+    }
+
+table 
+    {
+        width: 40%;
+        text-align: center;
+        font: arial; font-size: 20px;
+        margin-right:auto; margin-left:auto;
+        border-width: 10px;
+        border-style:double;
+        border-color: white;
+      
+    }
+
+.column1 
+    {
+        background-color: black;
+        color: whitesmoke;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-style: bold;
+    }
+
+a
+    {
+        text-decoration: none underline;
+        color: inherit;
+    }
+
+.column2
+    {
+        background-color: navy;
+        color: white;
+        font-style: italic;
+    }
+
+button
+    {
+        background-color:antiquewhite;
+        color: black;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+      
+    }
