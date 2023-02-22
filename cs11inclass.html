@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title></title>
+        
+        <style>
+            p{font-family:Arial; color:green;}
+            img{margin:auto;display:block;}
+        </style>
+        
+        
+        <script type="text/javascript">
+                function change2Red()
+                {
+                    /*built-in function*/
+                    document.getElementById("a").style.color = "red";
+                }
+                
+                function change2Black()
+                {
+                    /*built-in function*/
+                    document.getElementById("a").style.color = "black";
+                }
+
+                function changeText()
+                {
+                    document.getElementById("a").innerHTML = "This text has been changed!! :O";
+                    document.getElementById("a").style.color = "purple";
+                }
+
+                function addBorder()
+                {
+                    document.getElementByID("c").style.borderWidth = "5px";
+                    document.getElementByID("c").style.borderStyle = "ridge";
+                    document.getElementByID("c").style.borderColor = "red";
+                    /*document.*/
+                }
+
+
+        </script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h4>Problem 1 - Use buttons to Change Me.</h4>
+        <h3 id="a">Change this line to a red color font.Then change it back to a black font</h3>
+        <button onclick="change2Red()">Change to Red</button> &nbsp;&NonBreakingSpace;
+        <button onclick="change2Black()">Change to Black</button> &nbsp;&NonBreakingSpace;
+        <button onclick="changeText()">Change text</button>
+        <hr/>
+
+
+
+
+        <h4>Problem 2 - Click on me to change and double click to change back</h4>
+        <!-- When you click on it, change the paragraph to sans-serif font, navy color, 
+        and align it to the right of the page. When you double click on it, change it back
+        to arial font, green color and center it on the web page. -->
+        <p>JavaScript is a client scripting language which is used 
+           for creating web pages. It is a standalone language developed in Netscape. 
+           It is used when a webpage is to be made dynamic and add special effects 
+           on pages like rollover, roll out and many types of graphics.
+        </p>
+        <hr/>
+
+
+        <h3>Problem 3 - Mouseover the image to add a border and make the border disappear on mouseout</h3>
+        <img src="planes.jpeg" alt="Image of Planes" title="Fly High" width="400" id="c" onmouseover="this.style.border='1px solid black'"/>
+        <hr/>
+
+    
+    </body>
+</html>
