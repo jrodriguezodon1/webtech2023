@@ -11,6 +11,10 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<audio autoplay>
+		<source src="music.mp3" type="audio/mp3">
+		Your browser does not support the audio element.
+	  </audio>
 	<header class="nav-container">
 		<img class="nav-img" src="c-gen.png" width="5%">
 		<nav>
@@ -31,7 +35,11 @@
 				<button>Request Demo</button>
 				</div>
 				<div class="right">
-				<img src="prototype.png" width="100%">
+				<img src="prototype.png" width="100%" usemap="#tiktok/ig">
+				<map name="tiktok/ig">
+					<area href="http://www.tiktok.com/" shape="rect" coords="1929,420,2001,488"/>
+					<area href="http://www.instagram.com/" shape="rect" coords="1999,421,2071,489"/>
+				  </map>				  
 				</div>
 			</div>
 		</section>
@@ -50,7 +58,14 @@
 		<section id="start-campaign">
 			<div class="container">
 				<h2>Start a Campaign</h2>
-				<p>Our Start a Campaign page is designed to guide potential customers through the process of starting a successful influencer marketing campaign using Creator Genesis. We provide information on the type of creators that are available for campaigns and showcase the workflow behind Creator Genesis. You'll learn how the process of sourcing, outreach, onboarding, communication, activation, and tracking influencer performance works. Let us help you achieve your marketing goals efficiently and effectively.</p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/zEgOI1rNlyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<p>Our Start a Campaign page is designed to guide potential customers through the process of starting a successful influencer marketing campaign using Creator Genesis. 
+					We provide information on:
+					 Creators
+					 - The type of creators available.
+					 - Showcase the workflow. 
+					 
+					 You'll learn how the process of sourcing, outreach, onboarding, communication, activation, and tracking influencer performance works. Let us help you achieve your marketing goals efficiently and effectively.</p>
 				<button>Get Started</button>
 			</div>
 		</section>
@@ -83,7 +98,7 @@
 		<section id="contact">
 			<div class="container">
 				
-				<button><h2>Contact Us</h2></button>
+				<button><a style="color: blueviolet;" href="contact.html"><h2>Contact Us</h2></a></button>
 			</div>
 		
 

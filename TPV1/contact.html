@@ -6,7 +6,9 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header>
+	  
+	<header class="nav-container">
+		<img class="nav-img" src="c-gen.png" width="5%">
 		<nav>
 			<a href="index.html">Home</a>
 			<a href="about.html">About Us</a>
@@ -14,6 +16,7 @@
 			<a href="start-campaign.html">Start a Campaign</a>
 			<a href="contact.html">Contact Us</a>
 		</nav>
+		<button>Request Demo</button>
 	</header>
 	<main>
 
@@ -25,43 +28,63 @@
 				<p>Learn how Creator Genesis can help you drive sales with influencer marketing. Book time today to learn how to:</p>
 
 				<ul>
-				  <li>Develop long-term relationships with key influencers and brand builders</li>
-				  <li>Understand the full impact of your influencer programs on business revenue</li>
-				  <li>Activate new acquisition channels to drive growth</li>
-				</ul>
+					<li>Develop long-term relationships with key influencers and brand builders.</li>
+					<li>
+					  Understand the full impact of your influencer programs on business revenue.
+					  <ul style="padding-left: 20px;">
+						<li>Track ROI for each campaign</li>
+						<li>Analyze customer behavior and engagement.</li>
+					  </ul>
+					</li>
+					<li>Activate new acquisition channels to drive growth</li>
+				  </ul>
+
 				<br>
-								<button>Request Demo</button>
-				</div>
-				<div class="right">
-				<img src="prototype.png" width="100%">
+			</div>
+
+
+
+
+			<div class="right" class="form">
+					<form>
+						<label for="full-name">Full Name:</label>
+						<input type="text" id="full-name" name="full-name" required>
+					  
+						<label for="phone-number">Phone Number:</label>
+						<input type="tel" id="phone-number" name="phone-number" required>
+					  
+						<label for="job-title">Job Title:</label>
+						<input type="text" id="job-title" name="job-title" required>
+					  
+						<label for="company-name">Company Name:</label>
+						<input type="text" id="company-name" name="company-name" required>
+					  
+						<label for="business-type">What best describes your business?</label>
+						<select id="business-type" name="business-type">
+						  <option value="brand">Brand</option>
+						  <option value="agency">Agency</option>
+						  <option value="creator">Creator</option>
+						</select>
+					  
+						<p>What best describes your business?</p>
+						<input type="radio" id="brand" name="business-type" value="brand">
+						<label for="brand">Brand</label>
+						<br>
+						<input type="radio" id="agency" name="business-type" value="agency">
+						<label for="agency">Agency</label>
+						<br>
+						<input type="radio" id="creator" name="business-type" value="creator">
+						<label for="creator">Creator</label>
+						<br>
+					  
+						<button type="submit">Submit</button>
+					  </form>
+					  
 				</div>
 			</div>
 		</section>
 
 
-		<div class="form">
-		<form>
-			<label for="name">Name:</label>
-			<input type="text" id="name" name="name" required>
-		  
-			<label for="email">Email:</label>
-			<input type="email" id="email" name="email" required>
-		  
-			<label>Reason for Contacting:</label>
-			<input type="radio" id="question" name="reason" value="question">
-			<label for="question">Question</label>
-			<input type="radio" id="comment" name="reason" value="comment">
-			<label for="comment">Comment</label>
-		  
-			<label>Topics of Interest:</label>
-			<input type="checkbox" id="news" name="topics" value="news">
-			<label for="news">News</label>
-			<input type="checkbox" id="events" name="topics" value="events">
-			<label for="events">Events</label>
-		  
-			<label for="message">Message:</label>
-			<textarea id="message" name="message" rows="5" required></textarea>
-			</div>
 
     </main>
 	<footer>
