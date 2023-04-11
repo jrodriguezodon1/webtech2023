@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Passing Arguments to Functions.</title>
+        <!-- Don't worry about the styles. I just added them to make the page look better -->
+        <style type="text/css">
+            h1 {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            h1, div, h2 {
+                text-align: center;
+            }
+
+           
+
+            img#justFrame {border:2px ridge navy; display:block; margin:auto; width:200px; margin-bottom:100px;}
+            p {text-align:center;}
+            button {width:100px; height:30px; margin-right:20px; margin-left:20px;}
+            
+            
+        </style>
+
+        <script type="text/javascript">
+          /* This function is for the leaf with arguments */
+            
+            /*This below is what I would write for each button
+            I would need 4 functions, one for each button */
+          function showShamrock()
+        {
+            document.getElementById("justFrame").src = "shamrock.jpg"
+        }
+        
+
+        function showLeaf(myLeaf)
+        {
+            var myimg = document.getElementById("justFrame");
+            if (myLeaf == "s")
+            {
+                myimg.src = "shamrock.jpg";
+                myimg.alt = "Shamrock";
+                myimg.title = "Shady Shamrock";
+            }
+            else if (myLeaf == "c")
+            {
+                myimg.src = "clover.jpg";
+                myimg.alt = "Clover";
+                myimg.title = "Clever Clover";
+            }
+            else if (myLeaf == "m")
+            {
+                myimg.src = "maple.jpg";
+                myimg.alt = "Maple";
+                myimg.title = "Majestic Maple";
+            }
+            else
+            {
+                myimg.src = "thyme.jpg";
+                myimg.alt = "Thyme";
+                myimg.title = "Timely Thyme";
+            }
+        }
+
+        </script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1> Passing Arguments to Functions</h1>
+        <h2> Example Situation One</h2>
+        <img id="justFrame" src="" alt="Show Image Here" title=""/>
+        <p>
+          <button id="s" onclick="showLeaf(this.id)">Shamrock</button>
+          <button id="c" onclick="showLeaf(this.id)">Clover</button>
+          <button id="t" onclick="showLeaf(this.id)">Thyme</button>
+          <button id="m" onclick="showLeaf(this.id)">Maple</button>
+        </p>
+    </body>
+</html>

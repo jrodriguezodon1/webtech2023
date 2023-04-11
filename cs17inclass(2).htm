@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Change the Title, Please</title>
+	<style>
+        p, h3 {text-align:center;}
+        img {width:30%;}
+        button {width:150px; height:40px; 
+                background-color:green;; font-family:arial; 
+                color:yellow;}
+        div#b{text-align:center;}
+	</style>
+
+    
+    <script type="text/javascript">
+        var myslides = new Array("tiger5.jpg", "tiger6.jpg", "tiger7.jpg","tiger8.jpg");
+        var mycolors = new Array("pink", "green", "blue", "red");
+        var mycaps = new Array("This is Web Tech", "This is Fun", "It's a Tiger!");
+        var c = 0; 
+        var runflag = 0; 
+        var mycontrol;
+        
+        function showslides() {
+            var myimg = document.getElementById("a");
+            var myhead = document.getElementById("h");
+            runflag = 1;
+            myimg.src = myslides[c];
+            myimg.style.boxShadow = "20px 20px 10px " + mycolors[c];
+            myhead.innerHTML = mycaps[c];
+
+            c = c + 1;
+            if (c > myslides.length - 1) {
+                c = 0;
+            }
+            mycontrol = setTimeout("showslides()", 1000);
+        }
+
+            function stopIt() 
+            {
+            if (runflag == 1) {
+             runflag = 0;
+             clearTimeout(mycontrol); 
+        } else 
+        {
+        mycontrol = setTimeout("showslides()", 1000);
+            }
+            }
+
+    </script>
+</head>
+<body onload="showslides()">
+    <p>
+
+    <img id="a" src="tiger5.jpg" alt="Slide Show of Tigers" title="Tigers"/>
+    
+    </p>
+    <h3 id="h"></h3>
+    <!-- The above h3 will be used for showing a caption, if needed.-->
+    <div id="b">
+        <button onclick="stopIt()">Click to stop/resume</button>
+    </div>
+     
+</body>
+</html>

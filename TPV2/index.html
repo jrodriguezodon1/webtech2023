@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creator Genesis | Influencer Marketing Campaign Automation Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Background audio -->
+    <audio autoplay>
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- JavaScript function for mobile navigation menu -->
+    <script>
+        function toggleNavMenu() {
+            var menu = document.querySelector('.nav-mobile-menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+
+    </script>
+
+    <!-- Navigation Bar -->
+
+    <header class="nav-container">
+        <!-- Logo -->
+        <a href="index.html"><img class="nav-img" src="c-gen.png" width="5%"></a>
+
+        <!-- Desktop navigation menu -->
+        <nav>
+            <a class="navFont" href="about.html">About Us</a>
+            <a class="navFont" href="creator-search.html">Creator Search Tool</a>
+            <a class="navFont" href="start-campaign.html">Start a Campaign</a>
+            <a class="navFont" href="contact.html">Contact Us</a>
+            <button class="special-button" class="navFont">Request Demo</button>
+        </nav>
+
+        <!-- Mobile navigation menu -->
+        <div class="nav-mobile">
+            <button onclick="toggleNavMenu()">Menu</button>
+            <div class="nav-mobile-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="creator-search.html">Creator Search Tool</a>
+                <a href="start-campaign.html">Start a Campaign</a>
+                <a href="contact.html">Contact Us</a>
+                <button>Request Demo</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+
+        <!-- Home section -->
+        <section id="home" class="section" style="margin-top: 5%;">
+            <div class="maincontainer">
+                <div class="left">
+                    <h1 class="gradient-text">Ready to put your Creator Marketing on AutoPilot?</h1>
+                    <p style="font-style: italic;">All you do is- Select creators. Approve content. Repeat.</p>
+                    <div class="input-wrapper">
+                        <input type="text" class="rounded-input" placeholder="Input your email...">
+                        <button class="rounded-button">Sign-Up</button>
+                    </div>                      
+                </div>
+                <div class="right">
+                    <img src="prototype.png" width="100%" usemap="#tiktok/ig">
+                    <map name="tiktok/ig">
+                        <area href="http://www.tiktok.com/" shape="rect" coords="1929,420,2001,488"/>
+                        <area href="http://www.instagram.com/" shape="rect" coords="1999,421,2071,489"/>
+                    </map>
+                </div>
+            </div>
+        </section>
+
+        <!-- Example Videos! -->
+        <section class="section">
+
+            <div class="exVideos">
+                <img src="vid1.png">
+                <img src="vid2.png">
+                <img src="vid3.png">
+                <img src="vid1.png">
+                <img src="vid2.png">
+                <img src="vid3.png">
+                <img src="vid1.png">
+                <img src="vid2.png">
+            </div>
+
+            
+            <div class="container">
+            <div id="view-count">113407539</div>
+            <p class="gradient-text" style="margin-top: 20px;">Views Delivered</p>
+
+        </div>
+
+
+
+            <style>
+
+.gradient-text {
+    font-weight: bold;
+  background-image: linear-gradient(to right, #9796F0, #FBC7D4);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* VIDEO SCROLL-WHEEL STYLE */
+
+.section {
+  overflow: hidden;
+}
+
+.exVideos {
+  display: flex;
+  overflow-x: visible;
+  animation: scroll 30s linear infinite;
+  
+}
+
+.exVideos img {
+  margin-right: 20px;
+  max-width: 100%;
+  height: auto;
+  width: 25%;
+
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* VIEW-COUNTER STYLE */
+#view-count {
+font-size: 4vw;
+font-weight: bold;
+color: black;
+text-align: center;
+display: inline-block;
+                }
+                
+                #view-count span {
+                  display: inline-block;
+                  padding: 8px 12px;
+                  background-color: white;
+                  border-radius: 4px;
+                  margin-right: 4px;
+                }
+                
+                </style>
+                <script>
+                    /*
+                var viewCount = 113407539;
+                setInterval(function() {
+                  viewCount++;
+                  document.getElementById("view-count").innerHTML = viewCount.toLocaleString();
+                }, 10);
+                */
+                
+                var viewCount = 113407539;
+                var viewCountElem = document.getElementById("view-count");
+                setInterval(function() {
+                  viewCount++;
+                  var digits = viewCount.toLocaleString().split("");
+                  var spans = digits.map(function(digit) {
+                    return "<span>" + digit + "</span>";
+                  });
+                  viewCountElem.innerHTML = spans.join("");
+                }, 5);
+                
+                </script>
+                
+        </section>
+
+
+        <!-- Reviews Section -->
+        <section id="review-container">
+            <div class="container">
+                <h1 style="color:black;">Bringing the Best of Paid Media to Influencer Marketing</h1>
+                <p style="color:black; font-style: italic;">Our performance-based model combines the accountability of paid media with the personalization of influencer marketing.</p>
+                <div>
+                    <img src="Testimonial.png" style="width: 80%;">
+                </div>
+                <div>
+                    <img src="Press Logos.png" style="width: 40%; margin-top: 20px;">
+                </div>
+
+                <div class="reviews">
+                <img src="review1.png" width="40%">
+                <img src="review2.png" width="40%">
+                <img src="review3.png" width="40%">
+                </div>
+        
+            
+        </div>
+
+
+        </section>
+
+
+      
+
+        <!-- How Does It Work? -->
+        <section id="how"></section>
+            <div class="container">
+                <h2>How Does it Work?</h2>
+            
+                <img src="how.png" width="100%">
+
+            </div>
+        </section>
+            
+            
+
+
+        <!-- Start a Campaign section -->
+<section id="start-campaign">
+    <div class="container">
+        <h2>Start a Campaign</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zEgOI1rNlyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p>Our Start a Campaign page is designed to guide potential customers through the process of starting a successful influencer marketing campaign using Creator Genesis. 
+            We provide information on:
+            <ul>
+                <li>Creators</li>
+                <li>The type of creators available.</li>
+                <li>Showcase the workflow.</li>
+            </ul>
+            You'll learn how the process of sourcing, outreach, onboarding, communication, activation, and tracking influencer performance works. Let us help you achieve your marketing goals efficiently and effectively.</p>
+        <button>Get Started</button>
+    </div>
+</section>
+
+<!-- Testimonials section -->
+<section id="testimonials">
+    <div class="container">
+        <h2>Don't Just Take it From Us!</h2>
+        <table>
+            <tr>
+                <td>"C-Gen's influencer marketing platform has been a game changer for our business. It has allowed us to reach new audiences and generate more sales than we ever thought possible."</td>
+                <td>John Smith, CEO, ABC Company</td>
+            </tr>
+            <tr>
+                <td>"We were skeptical about influencer marketing at first, but C-Gen's platform made it easy to connect with the right influencers and track our results. It has become an essential part of our marketing strategy."</td>
+                <td>Jane Doe, Marketing Manager, XYZ Inc.</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<!-- Contact section -->
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <button><a style="color: blueviolet;" href="contact.html">Visit Contact Page</a></button>
+    </div>
+</section>
+
+<!-- Footer 
+<footer>
+    <p>&copy; 2023 Creator Economy Ventures, Inc.</p>
+</footer>-->
+
+
+<footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h2 class="logo-text">Creator Genesis</h2>
+        <p>Creator Genesis enhances your creator marketing efforts. Reach your true potential by using our software!</p>
+        <div class="contact">
+          <span><i class="fas fa-phone"></i> 786-503-4341</span>
+          <span><i class="fas fa-envelope"></i> info@creatorgenesis.com</span>
+        </div>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section links">
+        <h2>Site-Map</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="creator-search.html">Creator Search Tool</a></li>
+          <li><a href="start-campaign.html">Start a Campaign</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="credits.html">Website Credits</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact-form">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+          <input type="email" name="email" class="text-input contact-input" placeholder="Your email address">
+          <textarea name="message" class="text-input contact-input" placeholder="Your message"></textarea>
+          <button type="submit" class="btn btn-big contact-btn">
+            <i class="fas fa-envelope"></i>
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; Website Name | Designed by Your Name
+    </div>
+  </footer>
+  
+  <style>
+    /* Footer */
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 14px;
+  padding: 60px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-section h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin-bottom: 20px;
+}
+
+.contact span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.socials a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  margin-right: 10px;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.socials a:hover {
+  transform: translateY(-10px);
+}
+
+.links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 10px;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+  transition: border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
+  margin-right: 10px;
+}
+
+  .links a:hover {
+  border-bottom: 2px solid #fff;
+}
+  </style>

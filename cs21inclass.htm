@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Change this title</title>
+
+	<style>
+	/* Your styles go here */
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	  
+	let s = 10;
+	let timeoudId;
+	
+	function showForGrow()
+	{
+		const myh = document.getElementById("h");
+		myh.style.fontSize = s + "px";
+		s += 5;
+
+		if (s > 100)
+		{
+			clearTimeout(timeoutId);
+			timeoutId = setTimeout("showForShrink()", 500)
+		}
+		
+		else 
+		{
+			timeoutId = setTimeout("showForGrow()", 500)
+		}
+	}
+	
+	function showForShrink()
+	{
+		const myh = document.getElementById("h");
+		myh.style.fontSize = s + "px";
+		s -= 5;
+
+		if (s < 10)
+		{
+			clearTimeout(timeoutId);
+			timeoutId = setTimeout("showForGrow()", 500)
+		}
+		else
+		{
+			timeoutId = setTimeout("showForShrink()",500)
+		}
+	}
+
+	timeoutId = setTimeout(showForGrow, 500);
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+
+	<h1 id="h">Demo of the FOR Loop</h1>
+	<button onClick = "showForGrow()">Press here to start</button>
+	
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<style>
+/* 
+- Go see style.css! 
+*/
+</style>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Creator Genesis | Influencer Marketing Campaign Automation Tool</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<audio autoplay>
+		<source src="music.mp3" type="audio/mp3">
+		Your browser does not support the audio element.
+	  </audio>
+
+
+<!-- 
+	- Javascript function for mobile optimization (toggles Nav Bar when screen reaches 1024 px) 
+-->
+	  <script>
+		function toggleNavMenu() {
+		  var menu = document.querySelector('.nav-mobile-menu');
+		  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+		}
+	  </script>
+
+	
+<!--
+	- Nav Bar
+-->
+	<header class="nav-container">
+
+		<img class="nav-img" src="c-gen.png" width="5%">
+		
+		<!-- Toggling the Nav Bar For Responsive-->
+		
+		<nav>
+			<a class="navFont" href="index.html">Home</a>
+			<a class="navFont" href="about.html">About Us</a>
+			<a class="navFont" href="creator-search.html">Creator Search Tool</a>
+			<a class="navFont" href="start-campaign.html">Start a Campaign</a>
+			<a class="navFont" href="contact.html">Contact Us</a>
+			<button class="navFont">Request Demo</button>
+		</nav>
+
+		<div class="nav-mobile">
+			<button onclick="toggleNavMenu()">Menu</button>
+			<div class="nav-mobile-menu">
+			  <a href="index.html">Home</a>
+			  <a href="about.html">About Us</a>
+			  <a href="creator-search.html">Creator Search Tool</a>
+			  <a href="start-campaign.html">Start a Campaign</a>
+			  <a href="contact.html">Contact Us</a>
+			  <button>Request Demo</button>
+
+		</div>
+
+
+	</header>
+	<main>
+		<section id="home" class="section">
+			<div class="maincontainer">
+				<div class="left">
+				<h1>Influencer Marketing on Autopilot</h1>
+				<p>The influencer marketing software platform for high-growth companies.</p>
+				<button>Request Demo</button>
+				</div>
+				<div class="right">
+				<img src="prototype.png" width="100%" usemap="#tiktok/ig">
+				<map name="tiktok/ig">
+					<area href="http://www.tiktok.com/" shape="rect" coords="1929,420,2001,488"/>
+					<area href="http://www.instagram.com/" shape="rect" coords="1999,421,2071,489"/>
+				  </map>				  
+				</div>
+			</div>
+		</section>
+		<section id="about">
+			<div class="container">
+				<h1>The #1 Creator Management Platform</h1>
+				<p>You don’t have to be an expert to start advertising on TikTok. Create and run campaigns using simple self-serve tools, and track their performance with easy-to-read reports. No matter what kind of audience you want to reach, you'll find them here.</p>
+			</div>
+		</section>
+		<section id="creator-search">
+			<div class="container">
+				<h2>Creator Search Tool</h2>
+				<p>Our Creator Search Tool is a user-friendly platform that allows brands and agencies to find the perfect influencer for their marketing campaigns. Simply input specific criteria such as niche, engagement, or number of followers, and our software will provide you with a list of influencers that meet your needs. You can then use filters to refine your search results based on engagement rate, reach, and estimated cost per post.</p>
+			</div>
+		</section>
+		<section id="start-campaign">
+			<div class="container">
+				<h2>Start a Campaign</h2>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/zEgOI1rNlyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<p>Our Start a Campaign page is designed to guide potential customers through the process of starting a successful influencer marketing campaign using Creator Genesis. 
+					We provide information on:
+					 Creators
+					 - The type of creators available.
+					 - Showcase the workflow. 
+					 
+					 You'll learn how the process of sourcing, outreach, onboarding, communication, activation, and tracking influencer performance works. Let us help you achieve your marketing goals efficiently and effectively.</p>
+				<button>Get Started</button>
+			</div>
+		</section>
+		
+		<section id="testimonials">
+			<dic class="container">
+				<table>
+					<tr>
+					  <th colspan="2">Don't Just Take it From Us!</th>
+					</tr>
+					<tr>
+					  <td colspan="2">"C-Gen's influencer marketing platform has been a game changer for our business. It has allowed us to reach new audiences and generate more sales than we ever thought possible."</td>
+					</tr>
+					<tr>
+					  <td>John Smith</td>
+					  <td>CEO, ABC Company</td>
+					</tr>
+					<tr>
+					  <td colspan="2">"We were skeptical about influencer marketing at first, but C-Gen's platform made it easy to connect with the right influencers and track our results. It has become an essential part of our marketing strategy."</td>
+					</tr>
+					<tr>
+					  <td>Jane Doe</td>
+					  <td>Marketing Manager, XYZ Inc.</td>
+					</tr>
+				  </table>
+				  
+			</dic>
+		</section>
+		
+		<section id="contact">
+			<div class="container">
+				
+				<button><a style="color: blueviolet;" href="contact.html"><h2>Contact Us</h2></a></button>
+			</div>
+		
+
+				  
+				<!--
+
+				
+				<form action="submit-form.php" method="POST">
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" required>
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+					<label for="message">Message:</label>
+					<textarea id="message" name="message" required></textarea>
+					<button type="submit">Submit</button>
+				</form>
+                
+				<p>Address: 1234 Main Street, Anytown USA 12345</p>
+				<p>Phone: 555-555-5555</p>
+				<p>Email: info@creatorgenesis.com</p>
+				-->
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Creator Economy Ventures, Inc.</p>
+	</footer>
+</body>
+</html>
+
+
+

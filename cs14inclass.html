@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Please change the title  </title>
+        <!-- Don't worry about the styles. I just added them to make the page look better -->
+        <style type="text/css">
+            h1 {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            h1 {
+                text-align: center;
+            }
+            img {border:5px solid black; display:block; margin:auto;}
+            p {margin-right:100px; margin-left:100px; margin-bottom:50px;font-family:Arial;}
+        </style>
+
+        <script type="text/javascript">
+               
+                function showMe()
+            {
+                var myimg = document.getElementById("daimg");
+                var myinp = prompt("Please enter one of Shamrock, Thyme, Clover, or Maple");
+                if (myinp.toLowerCase() == "shamrock")
+                {
+                    myimg.src = "shamrock.jpg";
+                    myimg.alt = "Shamrock Leaf";
+                    myimg.title = "Super Shamrok";
+                    alert (myinp);
+                }
+                else if (myinp.toLowerCase() == "thyme")
+                {
+                    myimg.src = "thyme.jpg";
+                    myimg.alt = "Thyme Leaf";
+                    myimg.title = "Tacky Thyme";
+                    alert (myinp);
+                }
+                else if ( (myinp.toLowerCase() == "clover") || (myinp == "clov") )
+                {
+                    myimg.src = "clover.jpg";
+                    myimg.alt = "Clover Leaf";
+                    myimg.title = "Crazy Clover";
+                    alert (myinp);
+                }
+                else if (myinp.toLowerCase() == "maple")
+                {
+                    myimg.src = "maple.jpg";
+                    myimg.alt = "Maple Leaf";
+                    myimg.title = "Majestic Maple";
+                    alert (myinp);
+                }
+                else
+                {
+                    alert ("Please enter one of the given values. Try again...")
+                }
+            }
+
+                function clickie()
+                {
+                    var myimg=document.getElementById("plane");
+                    alert (myimg.src)
+                    if (myimg.src.match("planes.jpeg"))
+                    {
+                        myimg.src = "Ships.jpeg"
+                    }
+                    else
+                    {
+                        myimg.src = "planes.jpeg"
+                    }
+                    
+                    
+                }
+                
+
+            
+
+
+        </script>
+        
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        
+        <!-- PROBLEM TWO -->
+        <h1> Using Inputs with Conditional Statements - 2</h1>
+        <div> <p>
+            When the user clicks on the image (placeholder shown) below, ask the user to 
+            input one of 4 values: Shamrock, Clover, Thyme or Maple. Based on what the user
+            provides, show the corresponding image. The 4 images are provided to you. 
+            If you get this to work, then, what if the user types in using all-lower-case or 
+            all-upper-case? How will you change the code to cover that?
+        </p>
+        </div>
+        <div>
+        <img id="daimg" src="" alt="Image Goes Here" title="" width="200" onclick="showMe()"/>
+        </div>
+
+        <!-- END OF PROBLEM TWO.-->
+
+        <!-- PROBLEM 3- We may/not get to this in class today.-->
+        <h1> Changing the Image when you click on it</h1>
+        <div><p>
+            Given below is an image of planes. When you click on it,
+            change it to the image of ships. The way the function must work is, 
+            no matter what the image is, when you click on it, it must change to the 
+            other image. The ALT and TITLE must change appropriately.
+        </p></div>
+        <div>
+            <img id="plane" src="planes.jpeg" alt="Planes" title="Flying High" width="200" onclick="clickie()"/>
+        </div>
+    
+    </body>
+</html>

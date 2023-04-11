@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Q4.htm</title>
+        <style type="text/css">
+            h1 {
+                text-align: center;
+            }
+            form {
+                font-family: Arial;
+                
+                margin-left:300px; margin-right:300px;
+                padding-left:100px;
+            }
+            table {
+                width: 80%; border:1px solid black;
+            }
+            td {
+                width: 35%;
+            }
+            p {
+                width: 80%;
+                font-family: Arial;
+                color:Navy;
+                font-size: 16pt;
+                margin-left:300px; 
+            }
+            select,button, input {
+                font-size: 12pt;
+            }
+        </style>
+
+
+        <script type="text/javascript">
+            
+
+
+    let productPrice = 0;
+
+    /* Function that recognizes when a user has made a selection of either "Shirt" or "Pant" and then asks them what they are willing to pay for said product.*/
+    function userProductSelection(productSelect) {
+                const selectedProduct = productSelect.value;
+
+                /* If user selection is either shirt or pant -> user is prompted to enter price */
+                if (selectedProduct == 'Shirt' || selectedProduct == 'Pant') 
+                {
+                    const price = prompt(`What are you willing to pay for the ${selectedProduct}?`);
+                    
+                    /* Ensuring that user input is a number. */
+                    if (isNaN(parseFloat(price))) {
+                        alert('Please input a numerical value for the price.');
+                    }
+                    else {
+                        productPrice = parseFloat(price);
+                    }
+                }
+            }
+            
+    /* Function to compute the total based on user input. */
+    function computeTotal(event) {
+        event.preventDefault();
+
+        /* Pulling all the input that the user has done */
+        const productSelect = document.querySelector('select[name="product"]');
+        const quantitySelect = document.querySelector('select[name="quantity"]');
+        const totalInput = document.querySelector('input[name="total"]');
+        const selectedProduct = productSelect.value;
+        const selectedQuantity = parseInt(quantitySelect.value);
+
+
+                /* If a field is missing, change the field to red and alert the user to select correctly. */
+                if (!productPrice) 
+                {
+                    alert('Please select a product and enter its price.');
+                    totalInput.style.backgroundColor = 'red';
+                    return;
+                }
+                if (!selectedQuantity) 
+                {
+                    alert('Please select a quantity.');
+                    totalInput.style.backgroundColor = 'red';
+                    return;
+                }
+
+                /* Calculation of the total based on the product price and selected quantity */
+                const total = productPrice * selectedQuantity;
+                totalInput.value = `$${total.toFixed(2)}`;
+                totalInput.style.backgroundColor = 'white';
+                document.querySelector('input[name="total"]').value = `$${total.toFixed(2)}`;
+            }
+
+        </script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+
+        
+        <h1> Tally the Total (25 points) </h1>
+        <!--<p> This is a table with a form.<br/> 
+            There are 2 drop down menus - one for selecting the product and the other for selecting 
+            the fixed order quantity. <br/>
+            The user will select one from each list and click on compute. <br/>
+            Please ask the user the price they are willing to pay for the "shirt" or "pant" depending on what they selected (5).<br/> 
+            If shirt is selected, it must say "What are you willing to pay for the Shirt". Same for the pant as well. <br/>
+            Make sure that the price is not non-numerical (4). 
+            Please display the total (with $ signs) when the compute button is clicked (10). <br/> 
+            Please ensure that the user selects ONE valid value from each of the two drop down menus. If the 
+            first is not selected, the alert must say "Please select product". 
+            If the second is not selected, the alert must say "Please select Quantity". 
+            In both instances, the background color of the total must turn red. 
+            When the price is displayed correctly, the background must be white. (6).
+        </p>-->
+       <form action="" method="post" onsubmit="return false;">
+            <table>
+                 <tr>
+                     <td>
+                    <select name="product" onchange="userProductSelection(this)">
+                        <option value="">Please Select a Value</option>
+                        <option value="Shirt">Shirt</option>
+                        <option value="Pant">Pant</option>
+                    </select> 
+                     </td>
+                     <td>
+                     <select name="quantity">
+                        <option value="">Please Select a Value</option>
+                        <option value="10">10 Units</option>
+                        <option value="20">20 Units</option>
+                        <option value="30">30 Units</option>
+                    </select>
+                     </td>
+                     <td>
+                         Total: <input type="text" name="total" size="10" />
+                     </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><button onclick="computeTotal(event)">Compute</button>
+                    <input type="reset" name="reset" value="Clear"/></td>
+
+                </tr>
+           </table>
+         </form>
+       
+   
+    
+    </body>
+</html>
+
+

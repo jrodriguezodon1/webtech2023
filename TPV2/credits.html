@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creator Genesis | Influencer Marketing Campaign Automation Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <script>
+        function toggleNavMenu() {
+            var menu = document.querySelector('.nav-mobile-menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+    <!-- Navigation Bar -->
+    <header class="nav-container">
+        <!-- Logo -->
+        <a href="index.html"><img class="nav-img" src="c-gen.png" width="5%"></a>
+
+        <!-- Desktop navigation menu -->
+        <nav>
+            <a class="navFont" href="about.html">About Us</a>
+            <a class="navFont" href="creator-search.html">Creator Search Tool</a>
+            <a class="navFont" href="start-campaign.html">Start a Campaign</a>
+            <a class="navFont" href="contact.html">Contact Us</a>
+            <button class="special-button" class="navFont">Request Demo</button>
+        </nav>
+
+        <!-- Mobile navigation menu -->
+        <div class="nav-mobile">
+            <button onclick="toggleNavMenu()">Menu</button>
+            <div class="nav-mobile-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="creator-search.html">Creator Search Tool</a>
+                <a href="start-campaign.html">Start a Campaign</a>
+                <a href="contact.html">Contact Us</a>
+                <button>Request Demo</button>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Main content -->
+    <main>
+
+        <!-- Home section -->
+        <section id="home" class="section" style="margin-top: 5%;">
+            <div class="maincontainer">
+                <div class="left">
+                    <h1>Credits for the Website:</h1>
+                    <p style="font-style: italic;">All intellectual property at this website is in the public domain or the property of the site owner.</p>
+                      <p style="font-style: italic;">I Jose Rodriguez Odon pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work. I have read the term project instructions and have observed all the restrictions and limitations specified therein.</p>
+
+                </div>
+                
+            </div>
+        </section>
+
+
+
+
+<footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h2 class="logo-text">Website Name</h2>
+        <p>Creator Genesis enhances your creator marketing efforts. Reach your true potential by using our software!</p>
+        <div class="contact">
+          <span><i class="fas fa-phone"></i> 786-503-4341</span>
+          <span><i class="fas fa-envelope"></i> info@creatorgenesis.com</span>
+        </div>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section links">
+        <h2>Site-Map</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Creator Search Tool</a></li>
+          <li><a href="#">Start a Campaign</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Website Credits</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact-form">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+          <input type="email" name="email" class="text-input contact-input" placeholder="Your email address">
+          <textarea name="message" class="text-input contact-input" placeholder="Your message"></textarea>
+          <button type="submit" class="btn btn-big contact-btn">
+            <i class="fas fa-envelope"></i>
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; Website Name | Designed by Your Name
+    </div>
+  </footer>
+  
+  <style>
+    /* Footer */
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 14px;
+  padding: 60px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-section h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin-bottom: 20px;
+}
+
+.contact span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.socials a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  margin-right: 10px;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.socials a:hover {
+  transform: translateY(-10px);
+}
+
+.links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 10px;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+  transition: border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
+  margin-right: 10px;
+}
+
+  .links a:hover {
+  border-bottom: 2px solid #fff;
+}
+  </style>
