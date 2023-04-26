@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Change this title</title>
+
+	<style>
+	/* Your styles go here */
+
+	h1#a {text-align: center; font-family: Lucida Handwriting; font-size: 2em; margin: 3%;}
+	h2#b {text-align: center; font-family: Arial; font-size: 1em; margin: 5%}
+
+	</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.arctext.js"></script>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>	
+	<script>
+	/* Your JavaScript goes here */
+	  
+
+	$(function(){
+
+		$("h1#a").click( function(){
+
+			$(this).arctext( {radius:200, direction:1});
+			$("h2#b").arctext ( {radius:400, dir:-1});
+
+		})
+
+
+	});
+
+
+
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+
+	<h1 id="a">
+		Thank you All For A Great Sem!
+	</h1>
+
+	<h2 id="b">
+		Best Wishes For the Future!
+	</h2>
+	
+  </body>
+</html>

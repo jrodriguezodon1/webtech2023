@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Quiz #7</title>
+
+	<style>
+	/* Your styles go here */
+	button {height:40px; width:60px;}
+	body {
+		text-align:center;
+		justify-content: center;
+	}
+	
+	form {
+		background-color: silver;
+		padding: 10px;
+		font-family:fantasy;
+		margin-right: 300px;
+		margin-left: 300px;
+		border-radius: 10px;
+	}
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+
+
+	function validate(event) {
+		event.preventDe
+
+		var fullname = document.getElementById("fullname").value;
+        var age = document.getElementById("age").value;
+        var sex = document.getElementById("sex").value;
+        var major = document.getElementById("major").value.toUpperCase();
+
+		if (fullname == "" || !isNaN(fullname)) {
+			alert("Please make sure that your Name is not blank and NOT numeric!");
+			return;
+        }
+
+		if (age == "" || isNaN(age)) {
+			alert("Please make sure that your age is not blank and IS numeric!")
+			return;
+		}
+
+		if (sex == "empty") {
+			alert("Please selext a sex!")
+			return;
+		}
+
+		if (!["ITM", "MKT", "FIN", "ECON", "BA"].includes(major)) {
+			alert("Major must be either: ITM, MKT, FIN, ECON, or BA.");
+			return;
+		}
+
+		alert(
+		"Hello " +
+		fullname +
+		", you are " +
+		age +
+		" year old " +
+		sex +
+		" majoring in " +
+		major + "."
+		)
+
+	}
+
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1> Building a form</h1>
+	<!-- Construct a form that has the following fields: (1) Text box for you name. (2) Text box for your age.
+	(3) A drop down menu for your sex (4) a text box for your major and (5) a text area. Make
+	sure you add the submit and clear buttons to the form.  Format the form so that it looks good, 
+	centered on the page, with a silver background, arial font, with each element held with paragraphs. (10).
+
+	Once you are done, validate the form for the following: (1) Name should not be blank and it should not be
+	numeric. (2) The age must be a non numerical value and must not be blank. (3) Sex must be selected. (4) The
+	major can be one of ITM, MKT, FIN, ECON, or BA. You do not have to worry about case senstive typing here.
+	Display the data as "Hello Shankar, you are 32 year old male majoring in ITM". Substitute the appropriate
+	values in the above sentence. -->
+
+	<form onsubmit="validate(event)">
+	<p>
+		<label for="fullname">Full Name:</label>
+		<input type="text" id="fullname">
+	</p>
+	<p>
+		<label for="age">Age:</label>
+		<input type="text" id="age">
+	</p>
+	<p>
+		<label for="sex">Sex:</label>
+		<select id="sex">
+			<option value="empty">What is your sex?</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+		</select>
+	</p>
+	<p>
+		<label for="major">Major (one of; ITM, MKT, FIN, ECON, or BA):</label>
+		<input type="text" id="major">
+	</p>
+
+	<p>
+		<input type="submit" value="Submit">
+		<input type="reset" value="Clear">
+	</p>
+	</form>
+	
+  </body>
+</html>

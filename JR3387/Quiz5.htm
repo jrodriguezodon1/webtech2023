@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Quiz 5</title>
+        <style type="text/css">
+            table, td {border: 1px solid black;text-align:center; }
+            table {margin-right: auto;margin-left: auto;font-family: Arial;color: black;width:80%;}
+            .one {width: 30%;}
+            .two, .tri {width:35%;}
+            button {width: 80px;height: 40px;}
+            p#q {font-family: sans-serif;margin-right: 130px;margin-left: 130px;}
+            h1 {font-family:Arial; font-size:2em; text-align:center;}
+            input.clr {width: 150px;height: 40px;}
+            p#clearbutton {text-align: center;}
+            img {width:10%;}
+        </style>
+       
+
+       <script>
+        function computeTotal(event) {
+            event.preventDefault();
+
+            var beltQuantityInput = document.getElementsByName("beltq")[0];
+            var shoeQuantityInput = document.getElementsByName("shoeq")[0];
+            var beltAmountInput = document.getElementsByName("beltamount")[0];
+            var shoeAmountInput = document.getElementsByName("shoeamount")[0];
+            var beltImage = document.querySelector("img[alt='Belt Image']");
+            var shoeImage = document.querySelector("img[alt='Shoe Image']");
+        
+
+            var beltQuantity = beltQuantityInput.value;
+            var shoeQuantity = shoeQuantityInput.value;
+
+            /* Making sure user only enters quantity in one row  */
+            if (beltQuantity && shoeQuantity) {
+                alert("You cannot select a quantity for both products. Please select only one!");
+                return;
+            }
+
+            /* Making sure user inputs a quantity and it isn't blank. */
+            if (!beltQuantity && !shoeQuantity) {
+                alert("Please enter a quantity for one of the products.");
+                return;
+            }
+
+            /* Variables to store references to the elements related to "chosen" product*/
+            var chosenProduct, chosenQuantityInput, chosenAmountInput, chosenImage;
+
+            /* Updating variables to reflect the product selection. */
+            if (beltQuantity) {
+                chosenProduct = "belt";
+                chosenQuantityInput = beltQuantityInput;
+                chosenAmountInput = beltAmountInput;
+                chosenImage = beltImage;
+            } 
+            else {
+                chosenProduct = "shoe";
+                chosenQuantityInput = shoeQuantityInput;
+                chosenAmountInput = shoeAmountInput;
+                chosenImage = shoeImage;
+            }
+
+            /*  */
+            var chosenQuantity = parseFloat(chosenQuantityInput.value);
+                if (isNaN(chosenQuantity)) {
+                    alert(`Please enter a valid numeric value for the ${chosenProduct} quantity.`);
+                    return;
+                }
+
+            /* Making sure user price input is numerical and between the given ranges. */
+            var price = parseFloat(prompt(`Please enter the price for the ${chosenProduct}:`));
+                if (isNaN(price) || price < 12.99 || price > 39.99) {
+                    alert("Please enter a valid price. It has to be a numerical number between $12.99 and $39.99!");
+                    return;
+                }
+
+            /* Calculation updating total amount to be the inputted quantity times the price user selected*/
+            var totalAmount = chosenQuantity * price;
+            chosenAmountInput.value = `$${totalAmount.toFixed(2)}`;
+
+
+            /* Changing styling based on user selection (if belt, update belt img style & shoe img+value as blanks.*/
+            if (chosenProduct === "belt") {
+                shoeAmountInput.value = "$0.00";
+                beltImage.style.border = "3px solid red";
+                shoeImage.style.border = "";
+            } 
+            
+            else {
+                beltAmountInput.value = "$0.00";
+                shoeImage.style.border = "3px solid red";
+                beltImage.style.border = "";
+            }
+        }
+
+       </script>
+
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1>Fill out the Form (25 points)</h1>
+        <p id="q"> 
+            You are give a table within a form. There are two rows with three columns. Read instructions carefully before starting.
+            The first shows the image of the product.The second is the quantity (the user will enter this) and the third, the total amount (your 
+            function needs to compute this and show it). Use Javascript to create a functionality that does the following:<br/><br/>
+            1. The user should enter the quantity in one of the two rows only. If both are entered, alert the user to enter only one. 
+            If neither is entered, alert the user to enter a value in one of the two quantity fields. These two validations are 
+            worth 8 points total. For another 5 points, validate the quantity for non-numerical values. The error message has to be appropriate for 
+            the error. <br/><br/>
+            2. After entering the quantity, the user will click on the Compute Total button. Please prompt the user to enter a price for that product. 
+            Make sure that you validate price for non-numerical values with appropriate error messages.You may assume that the price field will always be entered (and 
+            hence you do not have to validate it for blank value). But, the acceptable price range is between $12.99 and $39.99. If 
+            any other value is entered, please let the user know. This part is worth 8 points (for the pop up and validations). <br/><br/>
+            3.Use the price and the quantity and compute the total amount and display it in the Amount field corresponding to the product
+            that user has chosen. Set that image to have a 3px, solid, and red border. The amount should be shown with the $ sign. 
+            The other Amount field (i.e. for the product NOT chosen) show the amount as $0.00. This image should not have a border. <br/><br/>
+            
+            Remember: prevent the default behaviour of the form.
+
+            
+        <form onsubmit="computeTotal(event)" method="POST">
+        <table>
+            <tr>
+                
+                <td class="one">Product</td>
+                <td class="two">Quantity</td>
+                <td class="tri">Amount</td>
+            </tr>
+            <tr>
+                <td class="one"><p><img src="belt.jpg" alt="Belt Image" title="Patent Leather"></p></td>
+                <td class="two"><p><input type="text" name="beltq" size="4" /></p></td>
+                <td class="tri"><p><input type="text" name="beltamount" size="6" /></p></td>
+            </tr>
+             <tr>
+                <td class="one"><p><img src="shoes.jpg" alt="Shoe Image" title="Well Worn!!"></p></td>
+                <td class="two"><p><input type="text" name="shoeq" size="4" /></p></td>
+                <td class="tri"><p><input type="text" name="shoeamount" size="6" /></p></td>
+            </tr>
+        </table>
+            <p id="clearbutton">
+               <input class="clr" type="submit" name="submit" value="COMPUTE TOTAL" /> &nbsp;&nbsp;&nbsp;
+             <input class="clr" type="reset" name="reset" value="CLEAR FORM" />
+                </p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Quiz 3 - Spring 2023</title>
+
+	<style>
+	/* Your styles go here */
+	h1 {font-family:Arial; font-size:2em; text-align:center;}
+	p { font-family:sans-serif;margin:0px 30px;}
+	table {font-family:Arial; text-align:center;margin-right:auto; margin-left:auto;width:70%;margin-top:30px;}
+	td, table {border:3px solid black;}
+	caption {font-size:1.5em; color:red; margin-bottom:5px;}
+    td.one {width:70%;}
+    td.two {width:30%; height:60px;}
+	body{padding:20px 100px;}
+
+
+	</style>
+	
+	<script>
+    /* Your JavaScript goes here */
+
+	function handleButtonClick(action) {
+        var image = document.querySelector("img");
+        var caption = document.querySelector("caption");
+        var buttons = document.querySelectorAll("button");
+
+        buttons.forEach((button) => (button.style.backgroundColor = "silver"));
+
+        if (action === "rocks") {
+          image.src = "smiley-1.jpg";
+          image.style.border = "10px ridge green";
+          caption.textContent = "Web-Tech Rocks";
+          buttons[0].style.backgroundColor = "yellow";
+        } 
+		
+		else if (action === "sucks") {
+          image.src = "frown-1.jpg";
+          image.style.border = "5px dashed red";
+          caption.textContent = "Web-Tech Sucks";
+          buttons[1].style.backgroundColor = "yellow";
+        } 
+		
+		else {
+          image.src = "";
+          image.style.border = "none";
+          caption.textContent = "Change this caption";
+        }
+      }
+
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1>Quiz 3 (25 points)</h1>
+	<p>The table below has three buttons in the right column and ONE image in the left. The image is left blank
+		and you can only see the ALT text. Please use javascript to implement the following functionality: <br/><br/>
+		1. When the Web-Tech Rocks button is clicked, show the smiley face in the image. The image should have a green border, 10px thick and ridge style. The Web-Tech Rocks button should be yellow. The other two must 
+		be silver. The line "Change this caption" must say "Web-Tech Rocks". <br/><br/>
+
+
+
+
+		2. When the Web-Tech Sucks is clicked show the frowny face in the image. The image should have a 
+		red border, 5px thick and dashed style. The Web-Tech Sucks button should be yellow. The other two must 
+		be silver. The line "Change this caption" must say "Web-Tech Sucks".<br/><br/>
+		3. When the Clear button is clicked, no image should be shown. No borders must be seen. All  buttons 
+		must have the silver background.The line "Change this caption" must say "Change this caption".<br/><br/>
+		4. For full (25) credit, write it as a single function. For a 5 point deduction write it using as many functions
+		as needed.
+	</p>
+	<table>
+		<caption>Change this caption</caption>
+		<tr>
+			<td class="one" rowspan="3">
+				<img src="" alt="Image Goes Here" title=""/>
+			</td>
+			<td class="two"><button onclick="handleButtonClick('rocks')">Web Tech Rocks</button></td>
+		</tr>
+		<tr>
+			<td class="two"><button onclick="handleButtonClick('sucks')">Web Tech Sucks</button></td>
+		</tr>
+		<tr>
+			<td class="two"><button onclick="handleButtonClick()">Clear It All</button></td>
+		</tr>
+	</table>
+	
+  </body>
+</html>
